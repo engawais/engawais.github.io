@@ -294,7 +294,6 @@
             padding: 38px;
             position: relative;
             overflow: hidden;
-            margin-bottom: 24px;
         }
 
         .featured-project::before {
@@ -351,6 +350,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            margin-top: 22px;
         }
 
         .project-card {
@@ -364,6 +364,15 @@
         .project-card:hover {
             transform: translateY(-4px);
             border-color: #38bdf8;
+        }
+
+        .project-status {
+            color: #fbbf24;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .project-card h3 {
@@ -589,9 +598,9 @@
 
                     <p>
                         My strongest area of interest is AI and Computer
-                        Vision. I have developed real-time hand gesture 
-                        recognition and translation systems using Python, OpenCV 
-                        and MediaPipe.
+                        Vision. I have developed an AI hand gesture
+                        recognition system using Python, OpenCV and
+                        MediaPipe.
                     </p>
 
                     <p>
@@ -699,7 +708,7 @@
                     <p>
                         OpenCV<br>
                         MediaPipe<br>
-                        Gesture Recognition
+                        Face Recognition
                     </p>
 
                 </div>
@@ -744,28 +753,30 @@
                 </h2>
 
                 <p class="section-description">
-                    A selection of AI, computer vision, and web development
+                    A selection of AI, software and web development
                     projects I have worked on.
                 </p>
 
             </div>
 
 
-            <!-- PROJECT 1: FEATURED (SignBridge AI) -->
+            <!-- FEATURED -->
             <div class="featured-project">
 
                 <div class="featured-badge">
-                    ★ FINAL YEAR PROJECT
+                    ★ FEATURED PROJECT
                 </div>
 
                 <h3>
-                    SignBridge AI — Hand Gesture & Sign Language Translation
+                    AI Hand Gesture Recognition System
                 </h3>
 
                 <p>
-                    An AI-powered computer vision application designed to perform real-time
-                    hand gesture recognition, sign language detection, and English-to-Urdu translation.
-                    Built using Python, OpenCV, MediaPipe, and CustomTkinter to bridge communication gaps.
+                    An AI-powered computer vision project that uses a
+                    camera to detect and recognize hand gestures.
+                    The system uses hand landmark detection with
+                    MediaPipe and computer vision processing with
+                    OpenCV to interpret gestures.
                 </p>
 
                 <div class="tech-list">
@@ -773,8 +784,7 @@
                     <span class="tech">Python</span>
                     <span class="tech">OpenCV</span>
                     <span class="tech">MediaPipe</span>
-                    <span class="tech">CustomTkinter</span>
-                    <span class="tech">Translation AI</span>
+                    <span class="tech">Machine Learning</span>
 
                 </div>
 
@@ -787,17 +797,23 @@
             </div>
 
 
-            <!-- PROJECT 2 & 3 GRID -->
+            <!-- OTHER PROJECTS -->
             <div class="projects-grid">
 
+
                 <div class="project-card">
+
+                    <div class="project-status">
+                        In Development
+                    </div>
 
                     <h3>
                         HireMate — AI-Powered Recruitment Platform
                     </h3>
 
                     <p>
-                        An intelligent recruitment platform designed to streamline hiring workflows, candidate matching, and resume evaluations using Python and modern web technologies.
+                        A recruitment platform developed using Python,
+                        HTML, CSS, JavaScript, PHP and MySQL.
                     </p>
 
                     <div class="tech-list">
@@ -815,11 +831,55 @@
                 <div class="project-card">
 
                     <h3>
+                        Face Recognition Attendance System
+                    </h3>
+
+                    <p>
+                        A computer vision based attendance system
+                        developed to recognize faces and manage
+                        attendance records.
+                    </p>
+
+                    <div class="tech-list">
+                        <span class="tech">Python</span>
+                        <span class="tech">OpenCV</span>
+                        <span class="tech">Face Recognition</span>
+                        <span class="tech">SQLite</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        House Price Prediction
+                    </h3>
+
+                    <p>
+                        A machine learning project developed using
+                        Python to work with housing data and predict
+                        house prices.
+                    </p>
+
+                    <div class="tech-list">
+                        <span class="tech">Python</span>
+                        <span class="tech">Machine Learning</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
                         Restaurant Management Website
                     </h3>
 
                     <p>
-                        A full-featured web application for restaurant management, handling online ordering, menu organization, and customer reservation databases.
+                        A web-based restaurant management project
+                        developed using frontend technologies,
+                        PHP and MySQL.
                     </p>
 
                     <div class="tech-list">
@@ -828,6 +888,26 @@
                         <span class="tech">JavaScript</span>
                         <span class="tech">PHP</span>
                         <span class="tech">MySQL</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>
+                        Student Management System
+                    </h3>
+
+                    <p>
+                        A student management application developed
+                        using Python, Tkinter and MySQL.
+                    </p>
+
+                    <div class="tech-list">
+                        <span class="tech">Python</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Tkinter</span>
                     </div>
 
                 </div>
