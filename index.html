@@ -287,8 +287,7 @@
         /* ================= FEATURED PROJECT ================= */
 
         .featured-project {
-            background:
-                linear-gradient(135deg, #0f1f32, #0d1727);
+            background: linear-gradient(135deg, #0f1f32, #0d1727);
             border: 1px solid #1e7eac;
             border-radius: 15px;
             padding: 38px;
@@ -306,6 +305,11 @@
             border-radius: 50%;
             right: -80px;
             top: -80px;
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 2;
         }
 
         .featured-badge {
@@ -328,6 +332,44 @@
             max-width: 780px;
             margin-bottom: 22px;
         }
+
+        /* ================= PROJECT IMAGES ================= */
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #263a52;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .project-image:hover {
+            transform: scale(1.01);
+            border-color: #38bdf8;
+        }
+
+        .featured-image {
+            height: 380px;
+            object-fit: contain;
+            background: #07101d;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .project-gallery .project-image {
+            height: 240px;
+            margin-bottom: 0;
+        }
+
+        /* ================= TECH ================= */
 
         .tech-list {
             display: flex;
@@ -460,6 +502,14 @@
             .skills-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                height: 280px;
+            }
         }
 
         @media (max-width: 600px) {
@@ -487,6 +537,14 @@
 
             .featured-project h3 {
                 font-size: 25px;
+            }
+
+            .project-image {
+                height: 220px;
+            }
+
+            .featured-image {
+                height: 230px;
             }
         }
     </style>
@@ -541,11 +599,11 @@
                     View Projects
                 </a>
 
-               <a href="./Resume.M.Awais%20%281%29.pdf"
-   download="Muhammad-Awais-CV.pdf"
-   class="btn btn-secondary">
-    Download CV
-</a>
+                <a href="./Resume.M.Awais%20%281%29.pdf"
+                   download="Muhammad-Awais-CV.pdf"
+                   class="btn btn-secondary">
+                    Download CV
+                </a>
 
             </div>
 
@@ -577,7 +635,6 @@
 
             </div>
 
-
             <div class="about-grid">
 
                 <div class="about-text">
@@ -591,9 +648,9 @@
 
                     <p>
                         My strongest area of interest is AI and Computer
-                        Vision. I have developed real-time hand gesture 
-                        recognition and translation systems using Python, OpenCV 
-                        and MediaPipe.
+                        Vision. I have developed real-time hand gesture
+                        recognition and translation systems using Python,
+                        OpenCV and MediaPipe.
                     </p>
 
                     <p>
@@ -604,7 +661,6 @@
                     </p>
 
                 </div>
-
 
                 <div class="about-card">
 
@@ -659,60 +715,41 @@
 
             </div>
 
-
             <div class="skills-grid">
 
                 <div class="skill-card">
-
                     <div class="skill-number">01</div>
-
                     <h3>Programming</h3>
-
                     <p>
                         Python<br>
                         C++<br>
                         SQL
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-number">02</div>
-
                     <h3>AI / Machine Learning</h3>
-
                     <p>
                         Machine Learning<br>
                         NumPy<br>
                         Pandas
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-number">03</div>
-
                     <h3>Computer Vision</h3>
-
                     <p>
                         OpenCV<br>
                         MediaPipe<br>
                         Gesture Recognition
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-number">04</div>
-
                     <h3>Web & Databases</h3>
-
                     <p>
                         HTML<br>
                         CSS<br>
@@ -720,7 +757,6 @@
                         PHP<br>
                         MySQL
                     </p>
-
                 </div>
 
             </div>
@@ -753,45 +789,71 @@
             </div>
 
 
-            <!-- PROJECT 1: FEATURED (SignBridge AI) -->
+            <!-- PROJECT 1: SIGNBRIDGE -->
             <div class="featured-project">
 
-                <div class="featured-badge">
-                    ★ FINAL YEAR PROJECT
+                <div class="featured-content">
+
+                    <div class="featured-badge">
+                        ★ FINAL YEAR PROJECT
+                    </div>
+
+                    <!-- SIGNBRIDGE MAIN IMAGE -->
+                    <img
+                        src="./signbridge-main.png.jpeg"
+                        alt="SignBridge AI hand gesture recognition system"
+                        class="project-image featured-image"
+                    >
+
+                    <h3>
+                        SignBridge AI — Hand Gesture & Sign Language Translation
+                    </h3>
+
+                    <p>
+                        An AI-powered computer vision application designed to perform
+                        real-time hand gesture recognition, sign language detection,
+                        and English-to-Urdu translation. Built using Python, OpenCV,
+                        MediaPipe, and CustomTkinter to bridge communication gaps.
+                    </p>
+
+                    <div class="tech-list">
+                        <span class="tech">Python</span>
+                        <span class="tech">OpenCV</span>
+                        <span class="tech">MediaPipe</span>
+                        <span class="tech">CustomTkinter</span>
+                        <span class="tech">Translation AI</span>
+                    </div>
+
+                    <!-- SECOND SIGNBRIDGE IMAGE -->
+                    <img
+                        src="./gusture%20recognization.png.png"
+                        alt="SignBridge gesture recognition interface"
+                        class="project-image"
+                    >
+
+                    <!-- MODEL TRAINING IMAGE -->
+                    <img
+                        src="./model%20train.png.jpeg"
+                        alt="SignBridge machine learning model training"
+                        class="project-image"
+                    >
+
+                    <a href="https://github.com/engawais"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-primary">
+                        GitHub Profile
+                    </a>
+
                 </div>
-
-                <h3>
-                    SignBridge AI — Hand Gesture & Sign Language Translation
-                </h3>
-
-                <p>
-                    An AI-powered computer vision application designed to perform real-time
-                    hand gesture recognition, sign language detection, and English-to-Urdu translation.
-                    Built using Python, OpenCV, MediaPipe, and CustomTkinter to bridge communication gaps.
-                </p>
-
-                <div class="tech-list">
-
-                    <span class="tech">Python</span>
-                    <span class="tech">OpenCV</span>
-                    <span class="tech">MediaPipe</span>
-                    <span class="tech">CustomTkinter</span>
-                    <span class="tech">Translation AI</span>
-
-                </div>
-
-                <a href="https://github.com/engawais"
-                   target="_blank"
-                   class="btn btn-primary">
-                    GitHub Profile
-                </a>
 
             </div>
 
 
-            <!-- PROJECT 2 & 3 GRID -->
+            <!-- OTHER PROJECTS -->
             <div class="projects-grid">
 
+                <!-- HIREMATE -->
                 <div class="project-card">
 
                     <h3>
@@ -799,7 +861,9 @@
                     </h3>
 
                     <p>
-                        An intelligent recruitment platform designed to streamline hiring workflows, candidate matching, and resume evaluations using Python and modern web technologies.
+                        An intelligent recruitment platform designed to streamline
+                        hiring workflows, candidate matching, and resume evaluations
+                        using Python and modern web technologies.
                     </p>
 
                     <div class="tech-list">
@@ -814,6 +878,7 @@
                 </div>
 
 
+                <!-- RESTAURANT -->
                 <div class="project-card">
 
                     <h3>
@@ -821,7 +886,9 @@
                     </h3>
 
                     <p>
-                        A full-featured web application for restaurant management, handling online ordering, menu organization, and customer reservation databases.
+                        A full-featured web application for restaurant management,
+                        handling online ordering, menu organization, and customer
+                        reservation databases.
                     </p>
 
                     <div class="tech-list">
@@ -857,7 +924,6 @@
                 </h2>
 
             </div>
-
 
             <div class="education-card">
 
@@ -914,33 +980,34 @@
                         Email Me
                     </a>
 
-                    <a href="https://github.com/engawais" 
-                       target="_blank" 
-                       class="btn btn-secondary"> 
-                        GitHub 
-                    </a> 
- 
-                </div> 
- 
-            </div> 
- 
-        </div> 
- 
-    </section> 
- 
- 
-    <!-- FOOTER --> 
-    <footer> 
- 
-        <div class="container"> 
- 
-            <p> 
-                © 2026 Muhammad Awais. Built with HTML & CSS. 
-            </p> 
- 
-        </div> 
- 
-    </footer> 
- 
-</body> 
-</html> give me upated code
+                    <a href="https://github.com/engawais"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-secondary">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 Muhammad Awais. Built with HTML & CSS.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
