@@ -10,7 +10,6 @@
           content="Muhammad Awais - Computer Engineering Graduate specializing in AI, Machine Learning, Computer Vision and Python.">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -32,17 +31,11 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
             width: 90%;
             max-width: 1120px;
             margin: auto;
         }
-
 
         /* ================= NAVBAR ================= */
 
@@ -85,7 +78,6 @@
             color: #38bdf8;
         }
 
-
         /* ================= HERO ================= */
 
         .hero {
@@ -94,19 +86,9 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-
             background:
-                radial-gradient(
-                    circle at 80% 20%,
-                    rgba(14, 165, 233, 0.14),
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    circle at 15% 80%,
-                    rgba(59, 130, 246, 0.08),
-                    transparent 30%
-                );
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.14), transparent 30%),
+                radial-gradient(circle at 15% 80%, rgba(59, 130, 246, 0.08), transparent 30%);
         }
 
         .hero-content {
@@ -183,7 +165,6 @@
             color: #06111f;
         }
 
-
         /* ================= SECTIONS ================= */
 
         section {
@@ -218,7 +199,6 @@
             margin-top: 10px;
             max-width: 650px;
         }
-
 
         /* ================= ABOUT ================= */
 
@@ -262,7 +242,6 @@
             font-size: 14px;
         }
 
-
         /* ================= SKILLS ================= */
 
         .skills-section {
@@ -305,17 +284,11 @@
             font-size: 14px;
         }
 
-
         /* ================= FEATURED PROJECT ================= */
 
         .featured-project {
             background:
-                linear-gradient(
-                    135deg,
-                    #0f1f32,
-                    #0d1727
-                );
-
+                linear-gradient(135deg, #0f1f32, #0d1727);
             border: 1px solid #1e7eac;
             border-radius: 15px;
             padding: 38px;
@@ -356,9 +329,6 @@
             margin-bottom: 22px;
         }
 
-
-        /* ================= TECH TAGS ================= */
-
         .tech-list {
             display: flex;
             gap: 8px;
@@ -374,50 +344,6 @@
             padding: 5px 11px;
             font-size: 12px;
         }
-
-
-        /* ================= PROJECT SCREENSHOTS ================= */
-
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin: 30px 0;
-        }
-
-        .project-image {
-            background: #08111f;
-            border: 1px solid #263a52;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .project-image:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .project-image:hover img {
-            transform: scale(1.03);
-        }
-
-        .image-caption {
-            padding: 12px 14px;
-            color: #94a3b8;
-            font-size: 13px;
-            background: #0c1727;
-        }
-
 
         /* ================= PROJECT GRID ================= */
 
@@ -452,7 +378,6 @@
             margin-bottom: 17px;
         }
 
-
         /* ================= EDUCATION ================= */
 
         .education-card {
@@ -481,7 +406,6 @@
             color: #94a3b8;
         }
 
-
         /* ================= CONTACT ================= */
 
         .contact-section {
@@ -506,7 +430,6 @@
             margin-bottom: 25px;
         }
 
-
         /* ================= FOOTER ================= */
 
         footer {
@@ -520,7 +443,6 @@
             color: #64748b;
             font-size: 13px;
         }
-
 
         /* ================= MOBILE ================= */
 
@@ -538,18 +460,7 @@
             .skills-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .project-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .project-image img {
-                height: auto;
-                max-height: 350px;
-                object-fit: contain;
-            }
         }
-
 
         @media (max-width: 600px) {
 
@@ -577,59 +488,31 @@
             .featured-project h3 {
                 font-size: 25px;
             }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- ================= NAVIGATION ================= -->
-
+    <!-- NAVIGATION -->
     <nav>
-
         <div class="container nav-container">
 
-            <a href="#" class="logo">
-                EngAwais
-            </a>
+            <a href="#" class="logo">EngAwais</a>
 
             <ul class="nav-links">
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
         </div>
-
     </nav>
 
 
-
-    <!-- ================= HERO ================= -->
-
+    <!-- HERO -->
     <section class="hero">
 
         <div class="container hero-content">
@@ -654,16 +537,15 @@
 
             <div class="buttons">
 
-                <a href="#projects"
-                   class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary">
                     View Projects
                 </a>
 
-                <a href="./Resume.M.Awais%20%281%29.pdf"
-                   download="Muhammad-Awais-CV.pdf"
-                   class="btn btn-secondary">
-                    Download CV
-                </a>
+               <a href="./Resume.M.Awais%20%281%29.pdf"
+   download="Muhammad-Awais-CV.pdf"
+   class="btn btn-secondary">
+    Download CV
+</a>
 
             </div>
 
@@ -672,9 +554,7 @@
     </section>
 
 
-
-    <!-- ================= ABOUT ================= -->
-
+    <!-- ABOUT -->
     <section id="about">
 
         <div class="container">
@@ -711,9 +591,9 @@
 
                     <p>
                         My strongest area of interest is AI and Computer
-                        Vision. I have developed real-time hand gesture
-                        recognition and translation systems using
-                        Python, OpenCV and MediaPipe.
+                        Vision. I have developed real-time hand gesture 
+                        recognition and translation systems using Python, OpenCV 
+                        and MediaPipe.
                     </p>
 
                     <p>
@@ -757,11 +637,8 @@
     </section>
 
 
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills"
-             class="skills-section">
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
 
         <div class="container">
 
@@ -785,16 +662,11 @@
 
             <div class="skills-grid">
 
-
                 <div class="skill-card">
 
-                    <div class="skill-number">
-                        01
-                    </div>
+                    <div class="skill-number">01</div>
 
-                    <h3>
-                        Programming
-                    </h3>
+                    <h3>Programming</h3>
 
                     <p>
                         Python<br>
@@ -807,13 +679,9 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-number">
-                        02
-                    </div>
+                    <div class="skill-number">02</div>
 
-                    <h3>
-                        AI / Machine Learning
-                    </h3>
+                    <h3>AI / Machine Learning</h3>
 
                     <p>
                         Machine Learning<br>
@@ -826,13 +694,9 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-number">
-                        03
-                    </div>
+                    <div class="skill-number">03</div>
 
-                    <h3>
-                        Computer Vision
-                    </h3>
+                    <h3>Computer Vision</h3>
 
                     <p>
                         OpenCV<br>
@@ -845,13 +709,9 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-number">
-                        04
-                    </div>
+                    <div class="skill-number">04</div>
 
-                    <h3>
-                        Web & Databases
-                    </h3>
+                    <h3>Web & Databases</h3>
 
                     <p>
                         HTML<br>
@@ -863,7 +723,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -871,9 +730,7 @@
     </section>
 
 
-
-    <!-- ================= PROJECTS ================= -->
-
+    <!-- PROJECTS -->
     <section id="projects">
 
         <div class="container">
@@ -896,150 +753,44 @@
             </div>
 
 
-
-            <!-- ================= SIGNBRIDGE ================= -->
-
+            <!-- PROJECT 1: FEATURED (SignBridge AI) -->
             <div class="featured-project">
 
                 <div class="featured-badge">
                     ★ FINAL YEAR PROJECT
                 </div>
 
-
                 <h3>
                     SignBridge AI — Hand Gesture & Sign Language Translation
                 </h3>
 
-
                 <p>
-                    An AI-powered computer vision application designed
-                    to perform real-time hand gesture recognition,
-                    sign language detection, and language translation.
-                    The system uses computer vision and hand landmark
-                    detection to interpret gestures and convert them
-                    into meaningful text.
+                    An AI-powered computer vision application designed to perform real-time
+                    hand gesture recognition, sign language detection, and English-to-Urdu translation.
+                    Built using Python, OpenCV, MediaPipe, and CustomTkinter to bridge communication gaps.
                 </p>
-
 
                 <div class="tech-list">
 
-                    <span class="tech">
-                        Python
-                    </span>
-
-                    <span class="tech">
-                        OpenCV
-                    </span>
-
-                    <span class="tech">
-                        MediaPipe
-                    </span>
-
-                    <span class="tech">
-                        CustomTkinter
-                    </span>
-
-                    <span class="tech">
-                        Machine Learning
-                    </span>
+                    <span class="tech">Python</span>
+                    <span class="tech">OpenCV</span>
+                    <span class="tech">MediaPipe</span>
+                    <span class="tech">CustomTkinter</span>
+                    <span class="tech">Translation AI</span>
 
                 </div>
 
-
-
-                <!-- ================= SCREENSHOTS ================= -->
-
-                <h4 style="
-                    color:#f8fafc;
-                    margin-bottom:15px;
-                    font-size:18px;
-                ">
-                    Project Screenshots
-                </h4>
-
-
-                <div class="project-gallery">
-
-
-                    <!-- Screenshot 1 -->
-
-                    <a href="./gusture%20recognization.png.png"
-                       target="_blank"
-                       class="project-image">
-
-                        <img
-                            src="./gusture%20recognization.png.png"
-                            alt="SignBridge AI gesture recognition interface">
-
-                        <div class="image-caption">
-                            Real-Time Gesture Recognition
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- Screenshot 2 -->
-
-                    <a href="./model%20train.png.jpeg"
-                       target="_blank"
-                       class="project-image">
-
-                        <img
-                            src="./model%20train.png.jpeg"
-                            alt="SignBridge AI machine learning model training">
-
-                        <div class="image-caption">
-                            Machine Learning Model Training
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- Screenshot 3 -->
-
-                    <a href="./signbridge-main.png.jpeg"
-                       target="_blank"
-                       class="project-image">
-
-                        <img
-                            src="./signbridge-main.png.jpeg"
-                            alt="SignBridge AI main application interface">
-
-                        <div class="image-caption">
-                            SignBridge AI Main Interface
-                        </div>
-
-                    </a>
-
-
-                </div>
-
-
-
-                <div class="buttons">
-
-                    <a href="https://github.com/engawais"
-                       target="_blank"
-                       class="btn btn-primary">
-
-                        View GitHub
-
-                    </a>
-
-                </div>
+                <a href="https://github.com/engawais"
+                   target="_blank"
+                   class="btn btn-primary">
+                    GitHub Profile
+                </a>
 
             </div>
 
 
-
-            <!-- ================= OTHER PROJECTS ================= -->
-
+            <!-- PROJECT 2 & 3 GRID -->
             <div class="projects-grid">
-
-
-                <!-- HIREMATE -->
 
                 <div class="project-card">
 
@@ -1048,46 +799,20 @@
                     </h3>
 
                     <p>
-                        An intelligent recruitment platform designed
-                        to streamline hiring workflows, candidate
-                        matching, and resume evaluation using Python
-                        and modern web technologies.
+                        An intelligent recruitment platform designed to streamline hiring workflows, candidate matching, and resume evaluations using Python and modern web technologies.
                     </p>
 
-
                     <div class="tech-list">
-
-                        <span class="tech">
-                            Python
-                        </span>
-
-                        <span class="tech">
-                            HTML
-                        </span>
-
-                        <span class="tech">
-                            CSS
-                        </span>
-
-                        <span class="tech">
-                            JavaScript
-                        </span>
-
-                        <span class="tech">
-                            PHP
-                        </span>
-
-                        <span class="tech">
-                            MySQL
-                        </span>
-
+                        <span class="tech">Python</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">MySQL</span>
                     </div>
 
                 </div>
 
-
-
-                <!-- RESTAURANT -->
 
                 <div class="project-card">
 
@@ -1096,151 +821,18 @@
                     </h3>
 
                     <p>
-                        A full-featured web application for restaurant
-                        management, handling menu organization,
-                        customer information and database operations.
+                        A full-featured web application for restaurant management, handling online ordering, menu organization, and customer reservation databases.
                     </p>
 
-
                     <div class="tech-list">
-
-                        <span class="tech">
-                            HTML
-                        </span>
-
-                        <span class="tech">
-                            CSS
-                        </span>
-
-                        <span class="tech">
-                            JavaScript
-                        </span>
-
-                        <span class="tech">
-                            PHP
-                        </span>
-
-                        <span class="tech">
-                            MySQL
-                        </span>
-
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">MySQL</span>
                     </div>
 
                 </div>
-
-
-
-                <!-- FACE RECOGNITION -->
-
-                <div class="project-card">
-
-                    <h3>
-                        Face Recognition Attendance System
-                    </h3>
-
-                    <p>
-                        A computer vision based attendance system
-                        developed to recognize faces and manage
-                        attendance records automatically.
-                    </p>
-
-
-                    <div class="tech-list">
-
-                        <span class="tech">
-                            Python
-                        </span>
-
-                        <span class="tech">
-                            OpenCV
-                        </span>
-
-                        <span class="tech">
-                            Face Recognition
-                        </span>
-
-                        <span class="tech">
-                            SQLite
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- HOUSE PRICE -->
-
-                <div class="project-card">
-
-                    <h3>
-                        House Price Prediction
-                    </h3>
-
-                    <p>
-                        A machine learning project developed using
-                        Python to analyze housing data and predict
-                        house prices.
-                    </p>
-
-
-                    <div class="tech-list">
-
-                        <span class="tech">
-                            Python
-                        </span>
-
-                        <span class="tech">
-                            Machine Learning
-                        </span>
-
-                        <span class="tech">
-                            Pandas
-                        </span>
-
-                        <span class="tech">
-                            NumPy
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- STUDENT MANAGEMENT -->
-
-                <div class="project-card">
-
-                    <h3>
-                        Student Management System
-                    </h3>
-
-                    <p>
-                        A desktop-based student management application
-                        developed with Python, Tkinter and MySQL for
-                        managing student records.
-                    </p>
-
-
-                    <div class="tech-list">
-
-                        <span class="tech">
-                            Python
-                        </span>
-
-                        <span class="tech">
-                            Tkinter
-                        </span>
-
-                        <span class="tech">
-                            MySQL
-                        </span>
-
-                    </div>
-
-                </div>
-
 
             </div>
 
@@ -1249,9 +841,7 @@
     </section>
 
 
-
-    <!-- ================= EDUCATION ================= -->
-
+    <!-- EDUCATION -->
     <section id="education">
 
         <div class="container">
@@ -1290,11 +880,8 @@
     </section>
 
 
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact"
-             class="contact-section">
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
 
         <div class="container">
 
@@ -1314,60 +901,46 @@
                     Python Development.
                 </p>
 
-
                 <a href="mailto:awaisdogar4040@gmail.com"
                    class="email">
-
                     awaisdogar4040@gmail.com
-
                 </a>
-
 
                 <div class="buttons"
                      style="justify-content:center;">
 
-
                     <a href="mailto:awaisdogar4040@gmail.com"
                        class="btn btn-primary">
-
                         Email Me
-
                     </a>
 
-
-                    <a href="https://github.com/engawais"
-                       target="_blank"
-                       class="btn btn-secondary">
-
-                        GitHub
-
-                    </a>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="container">
-
-            <p>
-                © 2026 Muhammad Awais. Built with HTML & CSS.
-            </p>
-
-        </div>
-
-    </footer>
-
-
-</body>
-</html>
+                    <a href="https://github.com/engawais" 
+                       target="_blank" 
+                       class="btn btn-secondary"> 
+                        GitHub 
+                    </a> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <!-- FOOTER --> 
+    <footer> 
+ 
+        <div class="container"> 
+ 
+            <p> 
+                © 2026 Muhammad Awais. Built with HTML & CSS. 
+            </p> 
+ 
+        </div> 
+ 
+    </footer> 
+ 
+</body> 
+</html> give me upated code
