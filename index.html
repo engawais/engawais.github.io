@@ -43,7 +43,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(8, 17, 31, 0.92);
+            background: rgba(8, 17, 31, 0.94);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid #1e293b;
         }
@@ -59,7 +59,6 @@
             font-size: 23px;
             font-weight: 800;
             color: #38bdf8;
-            letter-spacing: -0.5px;
         }
 
         .nav-links {
@@ -84,11 +83,9 @@
             min-height: 88vh;
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
             background:
-                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.14), transparent 30%),
-                radial-gradient(circle at 15% 80%, rgba(59, 130, 246, 0.08), transparent 30%);
+                radial-gradient(circle at 80% 20%, rgba(14,165,233,.14), transparent 30%),
+                radial-gradient(circle at 15% 80%, rgba(59,130,246,.08), transparent 30%);
         }
 
         .hero-content {
@@ -97,30 +94,31 @@
 
         .eyebrow {
             color: #38bdf8;
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 18px;
-            letter-spacing: 1px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            margin-bottom: 18px;
         }
 
         .hero h1 {
-            font-size: clamp(46px, 7vw, 76px);
+            font-size: clamp(48px, 7vw, 76px);
             line-height: 1.05;
             letter-spacing: -2px;
             color: #f8fafc;
             margin-bottom: 18px;
         }
 
-        .hero h1 span {
+        .hero h1 span,
+        .section-title span {
             color: #38bdf8;
         }
 
         .hero-title {
             font-size: clamp(23px, 3vw, 32px);
             color: #cbd5e1;
-            margin-bottom: 22px;
             font-weight: 600;
+            margin-bottom: 22px;
         }
 
         .hero-description {
@@ -142,7 +140,7 @@
             border-radius: 7px;
             font-size: 14px;
             font-weight: 700;
-            transition: 0.3s;
+            transition: .3s;
         }
 
         .btn-primary {
@@ -151,8 +149,8 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
             background: #7dd3fc;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
@@ -169,6 +167,11 @@
 
         section {
             padding: 95px 0;
+        }
+
+        .skills-section,
+        .contact-section {
+            background: #0b1525;
         }
 
         .section-header {
@@ -190,23 +193,18 @@
             letter-spacing: -1px;
         }
 
-        .section-title span {
-            color: #38bdf8;
-        }
-
         .section-description {
             color: #94a3b8;
             margin-top: 10px;
-            max-width: 650px;
+            max-width: 680px;
         }
 
         /* ================= ABOUT ================= */
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.4fr 0.8fr;
+            grid-template-columns: 1.4fr .8fr;
             gap: 60px;
-            align-items: start;
         }
 
         .about-text p {
@@ -234,7 +232,6 @@
             display: block;
             color: #38bdf8;
             font-size: 13px;
-            margin-bottom: 3px;
         }
 
         .about-card span {
@@ -243,10 +240,6 @@
         }
 
         /* ================= SKILLS ================= */
-
-        .skills-section {
-            background: #0b1525;
-        }
 
         .skills-grid {
             display: grid;
@@ -259,7 +252,7 @@
             border: 1px solid #1e293b;
             border-radius: 11px;
             padding: 25px;
-            transition: 0.3s;
+            transition: .3s;
         }
 
         .skill-card:hover {
@@ -284,98 +277,89 @@
             font-size: 14px;
         }
 
-        /* ================= FEATURED PROJECT ================= */
+        /* ================= PROJECTS ================= */
 
-        .featured-project {
-            background: linear-gradient(135deg, #0f1f32, #0d1727);
-            border: 1px solid #1e7eac;
-            border-radius: 15px;
-            padding: 38px;
-            position: relative;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background: #0f1a2b;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
             overflow: hidden;
-            margin-bottom: 24px;
+            transition: .3s;
         }
 
-        .featured-project::before {
-            content: "";
-            position: absolute;
-            width: 220px;
-            height: 220px;
-            background: rgba(56, 189, 248, 0.08);
-            border-radius: 50%;
-            right: -80px;
-            top: -80px;
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+            box-shadow: 0 15px 40px rgba(0,0,0,.25);
         }
 
-        .featured-content {
-            position: relative;
-            z-index: 2;
+        .project-card.featured {
+            grid-column: 1 / -1;
         }
 
-        .featured-badge {
-            display: inline-block;
+        .project-image-wrapper {
+            width: 100%;
+            height: 280px;
+            background: #07101d;
+            overflow: hidden;
+        }
+
+        .project-card.featured .project-image-wrapper {
+            height: 400px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .project-card.featured .project-image {
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.025);
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-number {
             color: #38bdf8;
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 1.5px;
-            margin-bottom: 13px;
+            margin-bottom: 9px;
         }
 
-        .featured-project h3 {
-            font-size: 30px;
+        .project-content h3 {
             color: #f8fafc;
-            margin-bottom: 14px;
+            font-size: 23px;
+            margin-bottom: 12px;
         }
 
-        .featured-project p {
-            color: #cbd5e1;
-            max-width: 780px;
-            margin-bottom: 22px;
+        .project-content p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
-
-        /* ================= PROJECT IMAGES ================= */
-
-        .project-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border: 1px solid #263a52;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .project-image:hover {
-            transform: scale(1.01);
-            border-color: #38bdf8;
-        }
-
-        .featured-image {
-            height: 380px;
-            object-fit: contain;
-            background: #07101d;
-        }
-
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .project-gallery .project-image {
-            height: 240px;
-            margin-bottom: 0;
-        }
-
-        /* ================= TECH ================= */
 
         .tech-list {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
-            margin-bottom: 25px;
+            margin-bottom: 23px;
         }
 
         .tech {
@@ -387,37 +371,26 @@
             font-size: 12px;
         }
 
-        /* ================= PROJECT GRID ================= */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+        .project-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .project-card {
-            background: #0f1a2b;
-            border: 1px solid #1e293b;
-            border-radius: 12px;
-            padding: 27px;
-            transition: 0.3s;
+        .small-btn {
+            display: inline-block;
+            padding: 9px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            transition: .3s;
         }
 
-        .project-card:hover {
-            transform: translateY(-4px);
+        .small-btn:hover {
             border-color: #38bdf8;
-        }
-
-        .project-card h3 {
-            color: #f8fafc;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 17px;
+            color: #38bdf8;
         }
 
         /* ================= EDUCATION ================= */
@@ -449,10 +422,6 @@
         }
 
         /* ================= CONTACT ================= */
-
-        .contact-section {
-            background: #0b1525;
-        }
 
         .contact-box {
             text-align: center;
@@ -503,12 +472,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .project-gallery {
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            .featured-image {
-                height: 280px;
+            .project-card.featured {
+                grid-column: auto;
+            }
+
+            .project-card.featured .project-image-wrapper {
+                height: 300px;
             }
         }
 
@@ -526,25 +499,17 @@
                 font-size: 48px;
             }
 
-            .skills-grid,
-            .projects-grid {
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            .featured-project {
-                padding: 27px;
-            }
-
-            .featured-project h3 {
-                font-size: 25px;
-            }
-
-            .project-image {
-                height: 220px;
-            }
-
-            .featured-image {
+            .project-image-wrapper,
+            .project-card.featured .project-image-wrapper {
                 height: 230px;
+            }
+
+            .project-content {
+                padding: 22px;
             }
         }
     </style>
@@ -552,462 +517,525 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container nav-container">
+<!-- ================= NAVIGATION ================= -->
 
-            <a href="#" class="logo">EngAwais</a>
+<nav>
+    <div class="container nav-container">
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <a href="#" class="logo">EngAwais</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            Computer Engineering Graduate
+        </div>
+
+        <h1>
+            Muhammad <span>Awais</span>
+        </h1>
+
+        <div class="hero-title">
+            AI/ML Engineer &nbsp;|&nbsp; Python Developer
+        </div>
+
+        <p class="hero-description">
+            I build practical solutions using Python, Machine Learning
+            and Computer Vision, with a focus on turning ideas into
+            useful real-world applications.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn btn-primary">
+                View Projects
+            </a>
+
+            <a href="./Resume.M.Awais%20%281%29.pdf"
+               download="Muhammad-Awais-CV.pdf"
+               class="btn btn-secondary">
+                Download CV
+            </a>
 
         </div>
-    </nav>
+
+    </div>
+
+</section>
 
 
-    <!-- HERO -->
-    <section class="hero">
+<!-- ================= ABOUT ================= -->
 
-        <div class="container hero-content">
+<section id="about">
 
-            <div class="eyebrow">
-                Computer Engineering Graduate
-            </div>
+    <div class="container">
 
-            <h1>
-                Muhammad <span>Awais</span>
-            </h1>
+        <div class="section-header">
 
-            <div class="hero-title">
-                AI/ML Engineer &nbsp;|&nbsp; Python Developer
-            </div>
+            <div class="section-label">About</div>
 
-            <p class="hero-description">
-                I build practical solutions using Python, Machine Learning
-                and Computer Vision, with a focus on turning ideas into
-                useful real-world applications.
+            <h2 class="section-title">
+                A little <span>about me</span>
+            </h2>
+
+            <p class="section-description">
+                Computer Engineering Graduate with a strong interest
+                in Artificial Intelligence, Machine Learning and
+                software development.
             </p>
 
-            <div class="buttons">
-
-                <a href="#projects" class="btn btn-primary">
-                    View Projects
-                </a>
-
-                <a href="./Resume.M.Awais%20%281%29.pdf"
-                   download="Muhammad-Awais-CV.pdf"
-                   class="btn btn-secondary">
-                    Download CV
-                </a>
-
-            </div>
-
         </div>
 
-    </section>
+        <div class="about-grid">
 
+            <div class="about-text">
 
-    <!-- ABOUT -->
-    <section id="about">
+                <p>
+                    I am a Computer Engineering Graduate from the
+                    University of Lahore with hands-on experience in
+                    Python, Machine Learning, Computer Vision,
+                    Web Development and MySQL.
+                </p>
 
-        <div class="container">
+                <p>
+                    My strongest area of interest is AI and Computer
+                    Vision. I have developed real-time hand gesture
+                    recognition and translation systems using Python,
+                    OpenCV and MediaPipe.
+                </p>
 
-            <div class="section-header">
-
-                <div class="section-label">
-                    About
-                </div>
-
-                <h2 class="section-title">
-                    A little <span>about me</span>
-                </h2>
-
-                <p class="section-description">
-                    Computer Engineering Graduate with a strong interest
-                    in Artificial Intelligence, Machine Learning and
-                    software development.
+                <p>
+                    I am looking for an entry-level opportunity where
+                    I can apply my technical skills, continue learning,
+                    and contribute to real-world software and AI projects.
                 </p>
 
             </div>
 
-            <div class="about-grid">
+            <div class="about-card">
 
-                <div class="about-text">
-
-                    <p>
-                        I am a Computer Engineering Graduate from the
-                        University of Lahore with hands-on experience in
-                        Python, Machine Learning, Computer Vision,
-                        Web Development and MySQL.
-                    </p>
-
-                    <p>
-                        My strongest area of interest is AI and Computer
-                        Vision. I have developed real-time hand gesture
-                        recognition and translation systems using Python,
-                        OpenCV and MediaPipe.
-                    </p>
-
-                    <p>
-                        I am looking for an entry-level opportunity where
-                        I can apply my technical skills, continue learning,
-                        and contribute to real-world software and
-                        AI projects.
-                    </p>
-
+                <div>
+                    <strong>Education</strong>
+                    <span>BS Computer Engineering</span>
                 </div>
 
-                <div class="about-card">
+                <div>
+                    <strong>University</strong>
+                    <span>University of Lahore</span>
+                </div>
 
-                    <div>
-                        <strong>Education</strong>
-                        <span>BS Computer Engineering</span>
-                    </div>
+                <div>
+                    <strong>Primary Focus</strong>
+                    <span>AI / Machine Learning</span>
+                </div>
 
-                    <div>
-                        <strong>University</strong>
-                        <span>University of Lahore</span>
-                    </div>
-
-                    <div>
-                        <strong>Primary Focus</strong>
-                        <span>AI / Machine Learning</span>
-                    </div>
-
-                    <div>
-                        <strong>Location</strong>
-                        <span>Lahore, Pakistan</span>
-                    </div>
-
+                <div>
+                    <strong>Location</strong>
+                    <span>Lahore, Pakistan</span>
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills-section">
+<!-- ================= SKILLS ================= -->
 
-        <div class="container">
+<section id="skills" class="skills-section">
 
-            <div class="section-header">
+    <div class="container">
 
-                <div class="section-label">
-                    Expertise
-                </div>
+        <div class="section-header">
 
-                <h2 class="section-title">
-                    Technical <span>Skills</span>
-                </h2>
+            <div class="section-label">Expertise</div>
 
-                <p class="section-description">
-                    Technologies and tools I have worked with through
-                    academic and personal projects.
+            <h2 class="section-title">
+                Technical <span>Skills</span>
+            </h2>
+
+            <p class="section-description">
+                Technologies and tools I have worked with through
+                academic and personal projects.
+            </p>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-number">01</div>
+                <h3>Programming</h3>
+                <p>
+                    Python<br>
+                    C++<br>
+                    SQL
                 </p>
-
             </div>
 
-            <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-number">02</div>
+                <h3>AI / Machine Learning</h3>
+                <p>
+                    Machine Learning<br>
+                    NumPy<br>
+                    Pandas
+                </p>
+            </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">01</div>
-                    <h3>Programming</h3>
-                    <p>
-                        Python<br>
-                        C++<br>
-                        SQL
-                    </p>
-                </div>
+            <div class="skill-card">
+                <div class="skill-number">03</div>
+                <h3>Computer Vision</h3>
+                <p>
+                    OpenCV<br>
+                    MediaPipe<br>
+                    Gesture Recognition
+                </p>
+            </div>
 
-                <div class="skill-card">
-                    <div class="skill-number">02</div>
-                    <h3>AI / Machine Learning</h3>
-                    <p>
-                        Machine Learning<br>
-                        NumPy<br>
-                        Pandas
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-number">03</div>
-                    <h3>Computer Vision</h3>
-                    <p>
-                        OpenCV<br>
-                        MediaPipe<br>
-                        Gesture Recognition
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-number">04</div>
-                    <h3>Web & Databases</h3>
-                    <p>
-                        HTML<br>
-                        CSS<br>
-                        JavaScript<br>
-                        PHP<br>
-                        MySQL
-                    </p>
-                </div>
-
+            <div class="skill-card">
+                <div class="skill-number">04</div>
+                <h3>Web & Databases</h3>
+                <p>
+                    HTML<br>
+                    CSS<br>
+                    JavaScript<br>
+                    PHP<br>
+                    MySQL
+                </p>
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- PROJECTS -->
-    <section id="projects">
+<!-- ================= PROJECTS ================= -->
 
-        <div class="container">
+<section id="projects">
 
-            <div class="section-header">
+    <div class="container">
 
-                <div class="section-label">
-                    Selected Work
-                </div>
+        <div class="section-header">
 
-                <h2 class="section-title">
-                    Featured <span>Projects</span>
-                </h2>
-
-                <p class="section-description">
-                    A selection of AI, computer vision, and web development
-                    projects I have worked on.
-                </p>
-
+            <div class="section-label">
+                Selected Work
             </div>
 
+            <h2 class="section-title">
+                Featured <span>Projects</span>
+            </h2>
 
-            <!-- PROJECT 1: SIGNBRIDGE -->
-            <div class="featured-project">
+            <p class="section-description">
+                A selection of AI, computer vision and web development
+                projects I have worked on.
+            </p>
 
-                <div class="featured-content">
+        </div>
 
-                    <div class="featured-badge">
-                        ★ FINAL YEAR PROJECT
-                    </div>
 
-                    <!-- SIGNBRIDGE MAIN IMAGE -->
+        <div class="projects-grid">
+
+
+            <!-- ================= PROJECT 1 ================= -->
+
+            <article class="project-card featured">
+
+                <div class="project-image-wrapper">
+
                     <img
                         src="./signbridge-main.png.jpeg"
-                        alt="SignBridge AI hand gesture recognition system"
-                        class="project-image featured-image"
+                        alt="SignBridge AI hand gesture recognition application"
+                        class="project-image"
+                        loading="lazy"
                     >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        01 / FINAL YEAR PROJECT
+                    </div>
 
                     <h3>
                         SignBridge AI — Hand Gesture & Sign Language Translation
                     </h3>
 
                     <p>
-                        An AI-powered computer vision application designed to perform
-                        real-time hand gesture recognition, sign language detection,
-                        and English-to-Urdu translation. Built using Python, OpenCV,
-                        MediaPipe, and CustomTkinter to bridge communication gaps.
+                        An AI-powered computer vision application designed
+                        for real-time hand gesture recognition, sign language
+                        detection and English-to-Urdu translation. The system
+                        uses computer vision and hand landmark detection to
+                        recognize gestures through a camera.
                     </p>
 
                     <div class="tech-list">
+
                         <span class="tech">Python</span>
                         <span class="tech">OpenCV</span>
                         <span class="tech">MediaPipe</span>
                         <span class="tech">CustomTkinter</span>
-                        <span class="tech">Translation AI</span>
+                        <span class="tech">Machine Learning</span>
+
                     </div>
 
-                    <!-- SECOND SIGNBRIDGE IMAGE -->
+                    <div class="project-links">
+
+                        <a href="https://github.com/engawais"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="small-btn">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= PROJECT 2 ================= -->
+
+            <article class="project-card">
+
+                <div class="project-image-wrapper">
+
                     <img
                         src="./gusture%20recognization.png.png"
-                        alt="SignBridge gesture recognition interface"
+                        alt="Gesture recognition project interface"
                         class="project-image"
+                        loading="lazy"
                     >
 
-                    <!-- MODEL TRAINING IMAGE -->
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        02 / COMPUTER VISION
+                    </div>
+
+                    <h3>
+                        Gesture Recognition System
+                    </h3>
+
+                    <p>
+                        A real-time computer vision system that detects
+                        hand gestures from a camera feed and converts
+                        recognized gestures into meaningful output.
+                    </p>
+
+                    <div class="tech-list">
+
+                        <span class="tech">Python</span>
+                        <span class="tech">OpenCV</span>
+                        <span class="tech">MediaPipe</span>
+                        <span class="tech">ML</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/engawais"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="small-btn">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= PROJECT 3 ================= -->
+
+            <article class="project-card">
+
+                <div class="project-image-wrapper">
+
                     <img
                         src="./model%20train.png.jpeg"
-                        alt="SignBridge machine learning model training"
+                        alt="Machine learning model training for gesture recognition"
                         class="project-image"
+                        loading="lazy"
                     >
 
-                    <a href="https://github.com/engawais"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn btn-primary">
-                        GitHub Profile
-                    </a>
-
                 </div>
 
-            </div>
+                <div class="project-content">
 
-
-            <!-- OTHER PROJECTS -->
-            <div class="projects-grid">
-
-                <!-- HIREMATE -->
-                <div class="project-card">
+                    <div class="project-number">
+                        03 / MACHINE LEARNING
+                    </div>
 
                     <h3>
-                        HireMate — AI-Powered Recruitment Platform
+                        Gesture Classification Model
                     </h3>
 
                     <p>
-                        An intelligent recruitment platform designed to streamline
-                        hiring workflows, candidate matching, and resume evaluations
-                        using Python and modern web technologies.
+                        A machine learning workflow for training a gesture
+                        classification model using collected hand landmark
+                        data and evaluating the trained model for recognition.
                     </p>
 
                     <div class="tech-list">
+
                         <span class="tech">Python</span>
-                        <span class="tech">HTML</span>
-                        <span class="tech">CSS</span>
-                        <span class="tech">JavaScript</span>
-                        <span class="tech">PHP</span>
-                        <span class="tech">MySQL</span>
+                        <span class="tech">Scikit-learn</span>
+                        <span class="tech">NumPy</span>
+                        <span class="tech">Pandas</span>
+
+                    </div>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/engawais"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="small-btn">
+                            GitHub
+                        </a>
+
                     </div>
 
                 </div>
 
+            </article>
 
-                <!-- RESTAURANT -->
-                <div class="project-card">
-
-                    <h3>
-                        Restaurant Management Website
-                    </h3>
-
-                    <p>
-                        A full-featured web application for restaurant management,
-                        handling online ordering, menu organization, and customer
-                        reservation databases.
-                    </p>
-
-                    <div class="tech-list">
-                        <span class="tech">HTML</span>
-                        <span class="tech">CSS</span>
-                        <span class="tech">JavaScript</span>
-                        <span class="tech">PHP</span>
-                        <span class="tech">MySQL</span>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- EDUCATION -->
-    <section id="education">
+<!-- ================= EDUCATION ================= -->
 
-        <div class="container">
+<section id="education">
 
-            <div class="section-header">
+    <div class="container">
 
-                <div class="section-label">
-                    Education
-                </div>
+        <div class="section-header">
 
-                <h2 class="section-title">
-                    Academic <span>Background</span>
-                </h2>
-
+            <div class="section-label">
+                Education
             </div>
 
-            <div class="education-card">
-
-                <div class="education-year">
-                    2022 — 2026
-                </div>
-
-                <h3>
-                    BS Computer Engineering
-                </h3>
-
-                <p>
-                    University of Lahore
-                </p>
-
-            </div>
+            <h2 class="section-title">
+                Academic <span>Background</span>
+            </h2>
 
         </div>
 
-    </section>
+        <div class="education-card">
 
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-
-        <div class="container">
-
-            <div class="contact-box">
-
-                <div class="section-label">
-                    Contact
-                </div>
-
-                <h2 class="section-title">
-                    Let's <span>connect</span>
-                </h2>
-
-                <p>
-                    I am currently seeking entry-level opportunities
-                    in Machine Learning, Artificial Intelligence and
-                    Python Development.
-                </p>
-
-                <a href="mailto:awaisdogar4040@gmail.com"
-                   class="email">
-                    awaisdogar4040@gmail.com
-                </a>
-
-                <div class="buttons"
-                     style="justify-content:center;">
-
-                    <a href="mailto:awaisdogar4040@gmail.com"
-                       class="btn btn-primary">
-                        Email Me
-                    </a>
-
-                    <a href="https://github.com/engawais"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn btn-secondary">
-                        GitHub
-                    </a>
-
-                </div>
-
+            <div class="education-year">
+                2022 — 2026
             </div>
 
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="container">
+            <h3>
+                BS Computer Engineering
+            </h3>
 
             <p>
-                © 2026 Muhammad Awais. Built with HTML & CSS.
+                University of Lahore
             </p>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2 class="section-title">
+                Let's <span>connect</span>
+            </h2>
+
+            <p>
+                I am currently seeking entry-level opportunities
+                in Machine Learning, Artificial Intelligence and
+                Python Development.
+            </p>
+
+            <a href="mailto:awaisdogar4040@gmail.com" class="email">
+                awaisdogar4040@gmail.com
+            </a>
+
+            <div class="buttons" style="justify-content:center;">
+
+                <a href="mailto:awaisdogar4040@gmail.com"
+                   class="btn btn-primary">
+                    Email Me
+                </a>
+
+                <a href="https://github.com/engawais"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Muhammad Awais. Built with HTML & CSS.
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
